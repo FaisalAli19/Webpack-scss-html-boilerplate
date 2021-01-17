@@ -1,0 +1,8 @@
+@import 'variable';
+@import 'mixins';
+@import "normalize";
+@import 'global';
+h1 {
+  color: $primary-color;
+  background-color: $bg;
+}
