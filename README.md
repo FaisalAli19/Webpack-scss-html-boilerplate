@@ -1,6 +1,6 @@
-# empty-project
+# Boilerplate
 
-Empty project.
+Boilerplate.
 
 ## Building and running on localhost
 
@@ -22,10 +22,10 @@ To create a development build:
 npm run build-dev
 ```
 
-## Running
+To Run a development server:
 
 ```sh
-node dist/bundle.js
+npm run start:dev
 ```
 
 ## Credits
