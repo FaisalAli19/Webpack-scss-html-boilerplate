@@ -23,31 +23,29 @@ const config = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.svg$/,
-        use: "file-loader",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              mimetype: "image/png",
-            },
-          },
-        ],
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        use: "file-loader",
+        type: "asset",
       },
     ],
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "index.html" }],
+      patterns: [
+        { from: "index.html" },
+        { from: "./src/images", to: "images" },
+      ],
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "index.html",
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({ filename: "[name].css" }),
     new CleanWebpackPlugin(),
   ],
   optimization: {

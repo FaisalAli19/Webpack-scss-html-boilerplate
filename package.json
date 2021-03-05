@@ -7,14 +7,14 @@
     "clean": "rm dist/*",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "start:dev": "webpack serve"
+    "start-dev": "webpack serve --mode development"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "autoprefixer": "^10.2.1",
+    "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
